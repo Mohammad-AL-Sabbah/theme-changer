@@ -1,0 +1,230 @@
+body{
+    transition: 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 750px;
+}
+.containerd{
+    border: 2px solid black;
+    width: 399px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+.tns{
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+.tns button{ 
+    all: unset;
+    border: 1px solid blueviolet;
+    padding: 12px 26px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+    background-color: aliceblue;
+    border-radius: 5px;
+    display: flex;
+
+}
+.btn-dark:hover{
+    background-color: black;
+    color: white;
+}
+.h-cont{
+    width: 399px;
+    text-align: center;
+}
+button{
+    padding: 10px;
+}
+.btn-blue:hover{
+    background-color: blue;
+    color: white;
+}
+.btn-red:hover{
+    background-color: red;
+    color: white;
+}
+.dark-mode{
+    background-color: black;
+}
+.c-mood{
+    position: relative;
+    animation-name: right;
+    animation-duration: 3s;
+}
+.c-dark{
+    display: none;
+}
+.r-dark{
+    display: none;
+}
+.b-dark{
+    display: none;
+}
+body.dark-mode .c-mood{
+    display: none;   
+}
+body.dark-mode .c-dark{
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: left;
+    animation-duration: 3s;
+    position: relative;
+}
+body.dark-mode .containerd{
+    border: 1px solid white;
+}
+body.blue-mode .containerd{
+    border: 1px solid rgb(255, 255, 255);
+}body.reds-mode .containerd{
+    border: 1px solid white;
+}
+body.blue-mode .c-mood{
+    display: none;
+}
+body.blue-mode .b-dark{
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: left;
+    animation-duration: 3s;
+    position: relative;
+}
+body.reds-mode .c-mood{
+    display: none;
+}
+body.reds-mode .r-dark{
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    animation-name: left;
+    animation-duration: 3s;
+    position: relative;
+}
+@keyframes right {
+    from{
+       
+        position: relative;
+        left: -105px;
+    }
+    to{
+        position: relative;
+        left: 0px;
+    }
+}
+@keyframes left{
+    from{
+        position: relative;
+        left: -135px;
+
+    }
+    to{
+        position: relative;
+        left: 0px;
+    }
+}
+.blue-mode{
+    background-color: rgb(24, 52, 190);
+}
+.reds-mode{
+    background-color: rgb(190, 24, 24);
+}
+@media (max-width: 420px) and (min-width: 400px){
+    .containerd {
+        border: 2px solid black;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+    }
+    .tns button {
+        all: unset;
+        border: 1px solid blueviolet;
+        padding: 12px 18px;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        background-color: aliceblue;
+        border-radius: 5px;
+        display: flex
+    ;
+    }
+    .h-cont{
+        width: 350px;
+        text-align: center;
+    }
+    @keyframes left{
+        from{
+            position: relative;
+            left: -110px;
+    
+        }
+        to{
+            position: relative;
+            left: 0px;
+        }
+    }
+    @keyframes right {
+        from{
+           
+            position: relative;
+            left: -70px;
+        }
+        to{
+            position: relative;
+            left: 0px;
+        }
+    }
+    
+}
+@media (max-width: 400px) and (min-width: 350px){
+    .containerd {
+        border: 2px solid black;
+        width: 324px;
+        display: flex;
+        flex-direction: column;
+        border-radius: 8px;
+    }
+    .tns button {
+        all: unset;
+        border: 1px solid blueviolet;
+        padding: 12px 15px  ;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        background-color: aliceblue;
+        border-radius: 5px;
+        display: flex
+    ;
+    }
+    .h-cont{
+        width: 324px;
+        text-align: center;
+    }
+    @keyframes left{
+        from{
+            position: relative;
+            left: -95px;
+    
+        }
+        to{
+            position: relative;
+            left: 0px;
+        }
+    }
+    @keyframes right {
+        from{
+           
+            position: relative;
+            left: -60px;
+        }
+        to{
+            position: relative;
+            left: 0px;
+        }
+    }
+    
+}
